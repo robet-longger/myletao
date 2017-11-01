@@ -1,65 +1,143 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
-    <title>乐淘分类</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>乐淘首页</title>
     <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="assets/mui/css/mui.css"/>
-    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="css/common.css"/>
-    <link rel="stylesheet" href="css/category.css"/>
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/category.css">
 </head>
+
+
 <body>
-<div class="lt_container">
-    <header class="lt_topBar">
-        <a class="btn_left" href="javascript:history.back();"><span class="mui-icon mui-icon-arrowleft"></span></a>
-        <h3>乐淘分类</h3>
-        <a class="btn_right" href="search.html"><span class="fa fa-search"></span></a>
-    </header>
-    <div class="lt_content">
-        <div class="lt_wrapper">
-            <!--左侧栏-->
-            <div class="lt_cateLeft">
-                <ul>
-                    <!--动态渲染-->
-                </ul>
-            </div>
-            <!--右内容-->
-            <div class="lt_cateRight">
-                <ul class="mui-clearfix">
-                    <!--动态渲染-->
-                </ul>
-            </div>
+    <div class="lt_view">
+        <!--头部 -->
+        <div class="lt_header">
+            <h3>乐淘云购</h3>
+            <a href="javascript:;" class="lt_top_rbtn fa fa-search"></a>
         </div>
+        <!-- 中间内容 -->
+        <div class="lt_content">
+            <!-- 左边 -->
+            <div class="lt_cat_left">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <!-- <a class="active" href="javascript:;">运动</a>
+                        <a href="javascript:;">运动</a>
+                        <a href="javascript:;">运动</a>
+                        <a href="javascript:;">运动</a>
+                        <a href="javascript:;">运动</a> -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- 右边 -->
+            <div class="lt_cat_right">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <ul class="mui-clearfix">
+                            <!-- <li>
+                                <a href="javascript:;">
+                                    <img src="./images/brand1.png" alt="">
+                                    <p>耐克</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="./images/brand2.png" alt="">
+                                    <p>耐克</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="./images/brand3.png" alt="">
+                                    <p>耐克</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="./images/brand4.png" alt="">
+                                    <p>耐克</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="./images/brand5.png" alt="">
+                                    <p>耐克</p>
+                                </a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <!-- 底部 -->
+        <div class="lt_footer miu-clearfix">
+
+            <a class="active" href="index.html">
+                <span class="fa fa-home"></span>
+                <p>首页</p>
+            </a>
+
+            <a href="category.html">
+                <span class="fa fa-bars"></span>
+                <p>分类</p>
+            </a>
+
+            <a href="index.html">
+                <span class="fa fa-shopping-cart"></span>
+                <p>购物车</p>
+            </a>
+
+            <a href="index.html">
+                <span class="fa fa-user"></span>
+                <p>会员中心</p>
+            </a>
+
+
+
+        </div>  
     </div>
-    <footer class="lt_tabBar">
-        <ul>
-            <li><a href="index.html"><span class="fa fa-home"></span><p>首页</p></a></li>
-            <li class="now"><a href="category.html"><span class="fa fa-bars"></span><p>分类</p></a></li>
-            <li><a href="cart.html"><span class="fa fa-shopping-cart"></span><p>购物车</p></a></li>
-            <li><a href="user/index.html"><span class="fa fa-user"></span><p>会员中心</p></a></li>
-        </ul>
-    </footer>
-</div>
-<script type="text/template" id="firstCategory">
-    <% for(var i = 0 ; i < rows.length ; i ++){ %>
-    <li data-id="<%=rows[i].id%>" class="<%=i==0?'now':'' %>"><a href="javascript:;"><%=rows[i].categoryName%></a></li>
-    <% } %>
-</script>
-<script type="text/template" id="secondCategory">
-    <%if(rows.length == 0){%>
-        <p style="padding: 10px">暂时没有分类数据</p>
-    <%}else{%>
-        <% for(var i = 0 ; i < rows.length ; i ++){ %>
-            <li><a href="#"><img src="<%=rows[i].brandLogo%>" onerror="this.src = 'images/none.jpg' " alt=""/><p><%=rows[i].brandName%></p></a></li>
-        <% } %>
-    <%}%>
-</script>
-<script src="assets/mui/js/mui.js"></script>
-<script src="assets/zepto/zepto.min.js"></script>
-<script src="assets/artTemplate/template-native.js"></script>
-<script src="js/common.js"></script>
-<script src="js/category.js"></script>
+<!-- 一级目录 -->
+    <script type="text/template" id="firstCat">
+        <% for (var i=0; i< rows.length;i++){%>
+            <!--  在里面给id是为了以二级分类点击事件需要data-id="<%=rows[i].id%>-->
+            <a class="<%= i==0?'active':''%> fc" href="javascript:;" data-id="<%=rows[i].id%>"><%=rows[i].categoryName%></a>
+        <%}%>
+    </script>
+<!-- 二级目录 -->
+    <script type="text/template" id="secondCat">
+        <% if(total==0){%>
+            <p>没有找到对应的数据</p>
+        <%} else{%>
+            <% for (var i=0; i< rows.length;i++){%>
+                <!--  在里面给id是为了以后三级分类需要data-id="<%=rows[i].categoryId %>-->
+                <li data-id="<%=rows[i].categoryId %>">
+                    <a href="javascript:;">
+                            <img src="<%=rows[i].brandLogo %>" alt="">
+                            <p><%=rows[i].brandName %></p>
+                    </a>
+                </li>
+            <%}%>
+        <%}%>
+        
+    </script>
+  
+
+    <script src="./assets/mui/js/mui.js"></script>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="./assets/artTemplate/template-native-debug.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/category.js"></script>
 </body>
+
 </html>

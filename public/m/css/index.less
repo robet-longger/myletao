@@ -1,0 +1,79 @@
+@import url("./common.less");
+// 滚动 --他是相对于body 做绝对定位所以掩盖了头部 要改为默认布局
+// .lt_wrapper {
+//     position: relative;
+//     height: 100%;
+//     width: 100%;
+    
+// }
+// 中间内容
+.lt_content {
+    padding: 0.5rem .1rem .6rem ;
+    .lt_nav {
+        ul {
+            li {
+                float: left;
+                width: 33.33%;
+            }
+        }
+    }
+    // 产品图
+    .lt_product {
+       
+        ul {
+            position: relative;
+            li:nth-of-type(1) {
+                width: 66.66%;
+                float: left;
+                img {
+                    width: 50%;
+                    float: left;
+                }
+            }
+            li:nth-of-type(2) {
+                width: 33.33%;
+                float: left;
+            }
+            li:nth-of-type(3) {
+                width: 66.66%;
+                float: left;
+                position: absolute;
+               bottom: 0;
+                left: 0;
+                img {
+                    width: 50%;
+                    float: left;
+                }
+            }
+        }
+
+    }
+    // 品牌专区
+    .lt_BrandZone{
+        padding-top: .2rem;
+        ul{
+            li{
+                width: 25%;
+                float: left;
+            }
+        }
+    }
+    // 运动生活专区
+    .lt_playZone{
+       ul{
+           li{
+               padding: .1rem;
+            //    border: 1px solid #000;
+               float: left;
+               width: 50%;
+               text-align: center;
+              a{
+                  box-shadow: 0 0 4px 0;
+                span{
+                    font-size: 0.18rem;
+                }
+              }
+           }
+       }
+    }
+}

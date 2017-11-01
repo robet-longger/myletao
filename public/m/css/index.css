@@ -1,13 +1,222 @@
-/*µ¼º½À¸*/
-.lt_nav{
-    margin-top: 10px;
-    padding: 0 10px;
+@media only screen and (max-width: 1080px), only screen and (max-device-width: 1080px) {
+  html,
+  body {
+    font-size: 168.75px;
+  }
 }
-.lt_nav a{
-    float: left;
-    width: 33.3333%;
+@media only screen and (max-width: 960px), only screen and (max-device-width: 960px) {
+  html,
+  body {
+    font-size: 150px;
+  }
 }
-.lt_nav a img{
-    width: 100%;
-    display: block;
+@media only screen and (max-width: 800px), only screen and (max-device-width: 800px) {
+  html,
+  body {
+    font-size: 125px;
+  }
+}
+@media only screen and (max-width: 720px), only screen and (max-device-width: 720px) {
+  html,
+  body {
+    font-size: 112.5px;
+  }
+}
+@media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {
+  html,
+  body {
+    font-size: 100px;
+  }
+}
+@media only screen and (max-width: 600px), only screen and (max-device-width: 600px) {
+  html,
+  body {
+    font-size: 93.75px;
+  }
+}
+@media only screen and (max-width: 540px), only screen and (max-device-width: 540px) {
+  html,
+  body {
+    font-size: 84.375px;
+  }
+}
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+  html,
+  body {
+    font-size: 75px;
+  }
+}
+@media only screen and (max-width: 414px), only screen and (max-device-width: 414px) {
+  html,
+  body {
+    font-size: 64.6875px;
+  }
+}
+@media only screen and (max-width: 400px), only screen and (max-device-width: 400px) {
+  html,
+  body {
+    font-size: 62.5px;
+  }
+}
+@media only screen and (max-width: 375px), only screen and (max-device-width: 375px) {
+  html,
+  body {
+    font-size: 58.59375px;
+  }
+}
+@media only screen and (max-width: 360px), only screen and (max-device-width: 360px) {
+  html,
+  body {
+    font-size: 56.25px;
+  }
+}
+@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
+  html,
+  body {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 240px), only screen and (max-device-width: 240px) {
+  html,
+  body {
+    font-size: 37.5px;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  width: 100%;
+}
+a {
+  display: block;
+}
+ul {
+  list-style: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.lt_view {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.lt_header {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #006699;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-size: .18rem;
+  color: #fff;
+  z-index: 999;
+}
+.lt_header h3 {
+  line-height: .5rem;
+  margin: 0;
+}
+.lt_header .lt_top_rbtn {
+  position: absolute;
+  top: .1rem;
+  right: .15rem;
+  color: #fff;
+  font-size: 0.2rem;
+}
+.lt_content {
+  height: 100%;
+  width: 100%;
+  padding-top: .5rem;
+  padding-bottom: .6rem;
+}
+.lt_content .lt_wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.lt_footer {
+  width: 100%;
+  height: 0.6rem;
+  background-color: #006699;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+}
+.lt_footer a {
+  float: left;
+  text-align: center;
+  width: 25%;
+  font-size: 0.2rem;
+  padding-top: .06rem;
+  color: #fff;
+}
+.lt_footer a p {
+  color: #fff;
+  margin: 0;
+}
+.lt_footer .active {
+  color: orange;
+}
+.lt_footer .active p {
+  color: orange;
+}
+.lt_content {
+  padding: 0.5rem .1rem .6rem ;
+}
+.lt_content .lt_nav ul li {
+  float: left;
+  width: 33.33%;
+}
+.lt_content .lt_product ul {
+  position: relative;
+}
+.lt_content .lt_product ul li:nth-of-type(1) {
+  width: 66.66%;
+  float: left;
+}
+.lt_content .lt_product ul li:nth-of-type(1) img {
+  width: 50%;
+  float: left;
+}
+.lt_content .lt_product ul li:nth-of-type(2) {
+  width: 33.33%;
+  float: left;
+}
+.lt_content .lt_product ul li:nth-of-type(3) {
+  width: 66.66%;
+  float: left;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.lt_content .lt_product ul li:nth-of-type(3) img {
+  width: 50%;
+  float: left;
+}
+.lt_content .lt_BrandZone {
+  padding-top: .2rem;
+}
+.lt_content .lt_BrandZone ul li {
+  width: 25%;
+  float: left;
+}
+.lt_content .lt_playZone ul li {
+  padding: .1rem;
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+.lt_content .lt_playZone ul li a {
+  box-shadow: 0 0 4px 0;
+}
+.lt_content .lt_playZone ul li a span {
+  font-size: 0.18rem;
 }
