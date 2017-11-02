@@ -109,34 +109,42 @@ body {
 }
 .lt_header {
   width: 100%;
-  height: 0.5rem;
+  height: 50px;
   background-color: #006699;
   position: absolute;
   top: 0;
   left: 0;
   text-align: center;
-  font-size: .18rem;
+  font-size: 18px;
   color: #fff;
   z-index: 999;
 }
 .lt_header h3 {
-  line-height: .5rem;
+  line-height: 50px;
+  font-size: 22px;
   margin: 0;
+}
+.lt_header .lt_top_btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #fff;
+  font-size: 20px;
 }
 .lt_header .lt_top_rbtn {
   position: absolute;
-  top: .1rem;
-  right: .15rem;
+  top: 15px;
+  right: 15px;
   color: #fff;
-  font-size: 0.2rem;
+  font-size: 20px;
 }
 .lt_content {
   padding-left: 0;
   padding-right: 0;
   height: 100%;
   width: 100%;
-  padding-top: .5rem;
-  padding-bottom: .6rem;
+  padding-top: 50px;
+  padding-bottom: 60px;
 }
 .lt_content .lt_wrapper {
   position: relative;
@@ -145,23 +153,29 @@ body {
 }
 .lt_footer {
   width: 100%;
-  height: 0.6rem;
+  height: 60px;
   background-color: #006699;
   position: absolute;
   left: 0;
   bottom: 0;
   z-index: 999;
+  padding-top: 10px;
 }
 .lt_footer a {
   float: left;
   text-align: center;
   width: 25%;
-  font-size: 0.2rem;
-  padding-top: .06rem;
+  height: 100%;
+  font-size: 20px;
   color: #fff;
+  margin: 0;
+}
+.lt_footer a span {
+  font-size: 30px;
 }
 .lt_footer a p {
   color: #fff;
+  font-size: 14px;
   margin: 0;
 }
 .lt_footer .active {
