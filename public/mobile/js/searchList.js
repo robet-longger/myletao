@@ -125,6 +125,7 @@ var getProductList = function(params,callback){
         },
         dataType:'json',
         success:function(data){
+            console.log(data);
             callback && callback(data);
         },
         error:function(){

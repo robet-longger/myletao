@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>后台管理系统-首页</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/bootstrap-validator/css/bootstrapValidator.min.css"/>
+    <link rel="stylesheet" href="assets/nprogress/nprogress.css"/>
+    <link rel="stylesheet" href="css/admin.css"/>
+</head>
+<body>
+
+<div class="ad-aside">
+    <!--logo-->
+    <div class="ad-logo"><a href="index.html">ITCAST</a></div>
+    <!--导航-->
+    <div class="ad-nav">
+        <div class="ad-user">
+            <img src="./images/default.png" alt="">
+            <span>超级管理员</span>
+        </div>
+        <div class="ad-navigator">
+            <ul>
+                <li>
+                    <a href="userManage.html"><span class="glyphicon glyphicon-user">&nbsp;用户管理</span></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><span class="glyphicon glyphicon-list">&nbsp;分类管理</span></a>
+                    <div class="cate" style="display: none">
+                        <a href="#">一级管理</a>
+                        <a href="#">二级管理</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="productManage.html"><span class="glyphicon glyphicon-tag">&nbsp;商品管理</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ad-content">
+    <div class="ad-opt clearfix">
+        <a href="javascript:;" class="ad-menu glyphicon glyphicon-align-justify"></a>
+        <a href="javascript:;" class="ad-exit glyphicon glyphicon-share"></a>
+    </div>
+    <div class="container-fluid">
+        <!--路径导航-->
+        <ol class="breadcrumb">
+            <li><a href="#">管理系统</a></li>
+            <li class="active">首页</li>
+        </ol>
+        <div class="ad-main">
+            <div class="ad-table">1</div>
+            <div class="ad-table">2</div>
+        </div>
+    </div>
+</div>
+
+<div class="myExitModel"></div>
+<!--模态框-->
+<script type="text/template" id="exitModel">
+
+</script>
+
+
+
+<script src="assets/jquery/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<script src="assets/nprogress/nprogress.js"></script>
+<script src="assets/echarts/echarts.min.js"></script>
+<script src="assets/artTemplate/template-native.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>乐淘首页</title>
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/searchList.css">
+</head>
+
+
+<body>
+    <div class="lt_view">
+        <!--头部 -->
+        <div class="lt_header">
+            <a href="javascript:history.back()" class="lt_top_btn fa fa-arrow-left"></a>
+            <h3>搜索中心</h3>
+            <a href="javascript:;" class="lt_top_rbtn fa fa-search"></a>
+        </div>
+        <!-- 中间内容 -->
+        <div class="lt_content">
+            <div class="lt_wrapper">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!-- 搜索框 -->
+                        <div class="lt_inputSearch">
+                            <input type="" placeholder="搜索你喜欢的视频" id="lt_searchInput">
+                            <a href="javascript:;" class="mui-btn-blue">搜索</a>
+                        </div>
+                        <!-- 排序块 -->
+                        <div class="lt-order">
+                            <a href="javascript:;" class="active" data-type="time">
+                                <span>上架时间</span>
+                                <span class="fa fa-angle-down"></span>
+                            </a>
+                            <a href="javascript:;" data-type="price">
+                                <span>价格</span>
+                                <span class="fa fa-angle-down"></span>
+                            </a>
+                            <a href="javascript:;" data-type="num">
+                                <span>销量</span>
+                                <span class="fa fa-angle-down"></span>
+                            </a>
+                            <a href="javascript:;" data-type="discount">
+                                <span>折扣</span>
+                                <span class="fa fa-angle-down"></span>
+                            </a>
+                        </div>
+                        <!-- 运动生活专区 -->
+                        <div class="lt_playZone">
+                            <a href="javascript:;">
+                                <img src="./images/title1.png" alt="">
+                            </a>
+                            <ul class="mui-clearfix">
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 底部 -->
+        <div class="lt_footer miu-clearfix">
+
+            <a class="active" href="index.html">
+                <span class="fa fa-home"></span>
+                <p>首页</p>
+            </a>
+
+            <a href="category.html">
+                <span class="fa fa-bars"></span>
+                <p>分类</p>
+            </a>
+
+            <a href="index.html">
+                <span class="fa fa-shopping-cart"></span>
+                <p>购物车</p>
+            </a>
+
+            <a href="index.html">
+                <span class="fa fa-user"></span>
+                <p>会员中心</p>
+            </a>
+
+
+
+        </div>
+    </div>
+    <script type="text/template" id="productList">
+        <%if(data.length == 0){%>
+            <span>没有找到相应的数据</span>
+        <%} else{%>
+            <%for(var i =0;i< data.length;i++){%>
+                <li>
+                    <a href="product-detail.html?id=<%=data[i].id%>">
+                        <img src="<%=data[i].pic[0].picAddr%>" alt="">
+                        <span class="mui-ellipsis-2"><%=data[i].proName%></span>
+                        <p>
+                            <span class="lt-pro-price">&yen;<%=data[i].price%></span>&nbsp;&nbsp;
+                            <del>&yen;<%=data[i].oldprice%></del>
+                        </p>
+                        <button class="mui-btn-blue">立即购买</button>
+                    </a>
+                </li>
+            <%}%>
+        <%}%>
+       
+        
+       
+    
+    </script>
+    <script src="./assets/artTemplate/template-native-debug.js"></script>
+    <script src="./assets/mui/js/mui.min.js"></script>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/searchList.js"></script>
+
+</body>
+
+</html>

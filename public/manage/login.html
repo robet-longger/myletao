@@ -40,62 +40,7 @@
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
 <script>
-    $(function () {
-
-        function login() {
-
-            var username = $("#username").val();
-            var password = $("#password").val();
-
-            if (!username) {
-                alert("请输入正确的用户名");
-                return;
-            }
-            if (!password) {
-                alert("请输入正确的密码");
-                return;
-            }
-
-            $.ajax({
-                url: "/employee/employeeLogin",
-                dataType: "json",
-                type: "POST",
-                data: {
-                    username: username,
-                    password: password
-                },
-                success: function (data) {
-                    console.log(data);
-                    if (data.success) {
-                        //跳转到首页
-                        window.location.href = "index.html";
-                    } else {
-
-                        alert(data.message);
-
-                    }
-                }
-            })
-
-
-        }
-
-        /*给登录按钮添加点击事件，点击登录，处理逻辑*/
-        $(".btn-lg").on("click", function () {
-            login();
-        });
-
-        //我还需要做一个快捷点登录.
-
-        $(document).keyup(function (event) {
-            //判断event 的值keyCode 的值，
-            //如果这个keyCode 的值等于13 ，说明用户按的是enter 键
-            if (event.keyCode == 13) {
-                login();
-            }
-        })
-
-    })
+   
 
 
 </script>

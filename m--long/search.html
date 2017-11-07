@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>乐淘首页</title>
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/search.css">
+</head>
+
+
+<body>
+    <div class="lt_view">
+        <!--头部 -->
+        <div class="lt_header">
+            <a href="javascript:history.back()" class="lt_top_btn fa fa-arrow-left"></a>
+            <h3>搜索中心</h3>
+            <a href="javascript:;" class="lt_top_rbtn fa fa-search"></a>
+        </div>
+        <!-- 中间内容 -->
+        <div class="lt_content">
+            <div class="lt_wrapper">
+                <!-- 搜索框 -->
+                <div class="lt_inputSearch">
+                    <input type="" placeholder="搜索你喜欢的视频" id="lt_searchInput">
+                    <a href="javascript:;" class="mui-btn-blue" >搜索</a>
+                </div>
+                <!-- 搜索历史 -->
+                <div class="searchHistory">
+                    <!-- <div class="lt_search_title">
+                        <span>搜索历史</span>
+                        <span class="icon_clear fa fa-trash">清空记录</span>
+                    </div>
+
+                    <ul class="lt_searchList">
+                        <li>
+                            <a href="javascript:;">111</a>
+                            <span class="icon_delete fa fa-close"></span>
+                        </li>
+                    
+                    </ul> -->
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- 底部 -->
+        <div class="lt_footer miu-clearfix">
+
+            <a class="active" href="index.html">
+                <span class="fa fa-home"></span>
+                <p>首页</p>
+            </a>
+
+            <a href="category.html">
+                <span class="fa fa-bars"></span>
+                <p>分类</p>
+            </a>
+
+            <a href="index.html">
+                <span class="fa fa-shopping-cart"></span>
+                <p>购物车</p>
+            </a>
+
+            <a href="index.html">
+                <span class="fa fa-user"></span>
+                <p>会员中心</p>
+            </a>
+
+
+
+        </div>
+    </div>
+    <script src="./assets/artTemplate/template-native-debug.js"></script>
+    <script src="./assets/mui/js/mui.min.js"></script>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/search.js"></script>
+    <script type="text/template" id="lthsitory">
+        <%if( items.length >0){%>
+            <div class="lt_search_title">
+                    <span>搜索历史</span>
+                    <span class="icon_clear fa fa-trash">清空记录</span>
+            </div>
+        <%} else{%>
+            <div class="lt_search_title">
+                   没有搜索数据
+            </div>
+        <%}%>
+        <%if( items.length >0){%>
+            <ul class="lt_searchList">
+                <%for(var i=items.length-1;i>0 ;i--){%>
+                    <li>
+                            <a href="searchList.html?key=<%=items[i]%>"><%=items[i]%></a>
+                            <span class="icon_delete fa fa-close" data-index ="<%=i%>"</span>
+                    </li>
+                <%}%>
+                    
+            </ul>
+        <%}%>
+            
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0" />
+    <title>乐淘首页</title>
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.css" />
+    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+
+<body>
+    <div class="lt-container">
+        <div class="lt-header">
+            <h3>乐淘云购</h3>
+            <a href="search.html" class="lt-top-rbtn fa fa-search"></a>
+        </div>
+        <div class="lt-content">
+            <div class="lt-wrapper">
+                <!--设置高度范围-->
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul id="OA_task_2" class="mui-table-view">
+                            <!-- <li class="mui-table-view-cell mui-transitioning mui-selected">
+                                <div class="mui-slider-right mui-disabled mui-selected">
+                                    <a class="mui-btn mui-btn-blue mui-icon ">编辑</a>
+                                    <a class="mui-btn mui-btn-yellow mui-icon">删除</a>
+                                </div>
+                                <div class="mui-slider-handle">
+                                    <div class="mui-table-cell">
+                                        <a href="javascript:;" class="mui-navigate-right mui-slider-handle">
+                                            <img class="mui-media-object mui-pull-left" src="/mobile/images/product.jpg">
+                                            <div class="mui-media-body">
+                                                <p class="name">匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</p>
+                                                <p class="info">
+                                                    <span class="price">¥499.1</span>
+                                                    <span class="oldPrice">¥888.1</span>
+                                                    <span class="number">x1双</span>
+                                                </p>
+                                                <p>
+                                                    <span class="size">鞋码：50</span>
+                                                </p>
+                                            </div>
+                                            <input data-id="6" type="checkbox" class="check" data-num="1" data-price="499.1">
+                                        </a>
+                                    </div>
+                                </div>
+                            </li> -->
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart_order">订单总额：¥
+            <span id="cartAmount">0.00</span>
+            <a href="javascript:;">生成订单</a>
+        </div>
+        <div class="lt-foot">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="fa fa-home"></span>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="category.html">
+                        <span class="fa fa-bars"></span>
+                        <p>分类</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#">
+                        <span class="fa fa-shopping-cart"></span>
+                        <p>购物车</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-user"></span>
+                        <p>个人中心</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  
+    <script type="text/template" id="cartList">
+        <% for(var i=0;i < items.length;i++){ %>
+        <li class="li mui-table-view-cell mui-transitioning">
+            <div class="mui-slider-right mui-disabled">
+                <a class="mui-btn mui-btn-blue" data-id="<%= items[i].id %>"  data-size="<%= items[i].size%>" data-productSize="<%= items[i].productSize%>"  data-num="<%= items[i].num %>">编辑</a>
+                <a class="mui-btn mui-btn-yellow" data-id="<%= items[i].id %>">删除</a>
+            </div>
+            <div class="mui-slider-handle">
+                <div class="mui-table-cell">
+                    <a href="javascript:;" class="mui-navigate-right mui-slider-handle">
+                        <img class="mui-media-object mui-pull-left" src="<%=items[i].pic[0].picAddr%>">
+                        <div class="mui-media-body">
+                            <p class="name"><%= items[i].proName %></p>
+                            <p class="info">
+                                <span class="price">¥<%= items[i].price %></span>
+                                <span class="oldPrice">¥<%=items[i].oldPrice %></span>
+                                <span class="number">x<%=items[i].num %>双</span>
+                            </p>
+                            <p><span class="size">鞋码：<%= items[i].size %></span></p>
+                        </div>
+                        <input data-id="6" type="checkbox" class="check" data-num="<%=items[i].num%>" data-price="<%=items[i].price%>">
+                    </a>
+                </div>
+            </div>
+        </li>
+        <% } %>
+    </script>
+    
+   </scirpt>
+    <!--DOMStringMap {id: "6", size: "40", productnum: "20", num: "7", productsize: "35-45"}-->
+
+    <script type="text/template" id="editCart">
+        <div class="lt-item">
+                尺码：
+                <%
+                    var str = productsize;
+                    var str = str.split("-");
+                    var start = str[0]
+                    var end = str[1];
+                %>
+                <%for(var i=start;i<=end ;i++){%>
+                    <span class="psize <%= i==start?'active':''%>"><%=i%></span>
+                <%}%>
+                    
+            </div>
+            <div class="lt-item">
+                数量：
+                <div class="mui-numbox" data-numbox-min="1" data-numbox-max="<%=num%>">
+                    <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+                    <input class="mui-input-numbox" type="number" value="1">
+                    <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+                </div>
+            </div>
+    </script>
+    <script src="./assets/mui/js/mui.js"></script>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="./assets/artTemplate/template-native.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+
+</html>
